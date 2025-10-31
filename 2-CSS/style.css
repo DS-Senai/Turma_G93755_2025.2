@@ -1,0 +1,176 @@
+/* 
+- CSS significa Cascading Style Sheets (Folhas de Estilo em Cascata) 
+- Estrutura básica do CSS: seletor, propriedade e valor
+- EXPLICANDO UM BOX MODEL
+
++---------------------------------------------------+
+|                  Margem (Margin)                  |
+|   +-------------------------------------------+   |
+|   |               Borda (Border)              |   |
+|   |   +-----------------------------------+   |   |
+|   |   |       Preenchimento (Padding)     |   |   |
+|   |   |   +---------------------------+   |   |   |
+|   |   |   |       Conteúdo (Content)  |   |   |   |
+|   |   |   |                           |   |   |   |
+|   |   |   +---------------------------+   |   |   |
+|   |   |                                   |   |   |
+|   |   +-----------------------------------+   |   |
+|   |                                           |   |
+|   +-------------------------------------------+   |
+|                                                   |
++---------------------------------------------------+ 
+
+*/
+
+* {
+    margin:0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color:  #4b0082;
+    color: white;
+    text-align: center;
+    padding: 20px;
+} 
+
+.profile-photo {
+    background-color: aliceblue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    background-image: url('imagem.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: aliceblue;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.main-nav {
+    text-align: center;
+    color: aliceblue;
+    background-color: rgba(72, 187, 150, 0.526);
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.main-nav a {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight:bold;
+    margin: 0 15px;
+    transition: color 0.4s;
+    transition: font-size 0.3s;
+    
+}
+
+.main-nav a:hover {
+    color: rgb(170, 154, 6);
+    font-size: 20px;
+}
+
+/* SEÇÕES - INTRODUÇÃO AO CSS */
+.section {
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: rgb(247, 250, 247);
+    border-radius: 2%;
+    box-shadow: 0 0 5px rgba(242, 226, 226, 0.618);
+}
+#sec-intro ul li {
+    list-style: none;
+}
+
+#sec-intro ul li::before {
+    content: '\2713\ ';
+    color: rgb(100, 100, 192);
+    font-weight: bold;
+}
+
+/* TRABALHANDO COM DIV */
+.box-principal {
+    color: white;
+    background-color: green;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;   
+}
+
+/* ALINHAMENTO DE DIVs */
+.alinhamento-box {
+    float: left;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 {
+    width: 150px;
+    height: 100px;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: green;
+}
+
+.box3 {
+    background-color: rgb(128, 0, 119);
+}
+
+.box4 {
+    background-color: rgb(67, 54, 187);
+}
+
+.box5 {
+    background-color: green;
+}
+
+.box6 {
+    background-color: rgb(128, 0, 119);
+}
+
+/* CORES GRADIENTE */
+.color-box {
+    width: 150px;
+    height: 100px;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.color1 { background: radial-gradient(red, yellow); }
+.color2 { background: linear-gradient(90deg, #1b1678 0%, #ba259a 50%, #589d13 100%); }
+.color3 { background: linear-gradient(to bottom, #11772e 0%, #7e2167 50%, #b5c6d0 100%); color: black; }
+.color4 { background: linear-gradient(to right, #7f5c15, #d8e1e7, #b5c6d0, #529f0f); color: black; }
+.color5 { background: linear-gradient(to right, red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%); }

@@ -1,0 +1,271 @@
+/* ========================
+   RESET BÁSICO
+   ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================
+   ESTILOS GERAIS
+   ======================== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Títulos e Parágrafos */
+h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+section p {
+    max-width: 600px;
+    margin: 0 auto 20px auto; /* Adicionado margin-bottom */
+    font-size: 18px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    padding: 30px 20px; /* Aumentado o padding vertical */
+    color: white;
+    text-shadow: 1px 1px 2px #00000044;
+}
+header h1 {
+    font-size: 28px;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #333;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px; /* Adicionado padding para separar do topo */
+}
+nav li {
+    margin: 5px 10px; /* Ajustado a margem */
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background-color: #6dd5ed;
+    color: #333;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+/* Espaçamento entre todas as seções */
+main section {
+    padding: 20px 0;
+}
+
+/* Mensagens Desktop/Mobile */
+.msg-desktop, .msg-mobile {
+    font-size: 22px;
+    margin-bottom: 20px; /* Adicionado mais espaçamento */
+}
+.msg-mobile {
+    /* display: block; */
+    display: none;
+    color: brown;
+}
+
+/* ========================
+   SEÇÕES INDIVIDUAIS
+   ======================== */
+/* Seção Sobre */
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Aumentado o espaçamento entre os elementos */
+    flex-wrap: wrap;
+}
+.sobre-texto {
+    max-width: 400px;
+}
+.sobre-img {
+    width: 250px;
+    height: 250px;
+    background: url('imagem.webp') no-repeat center/cover;
+    border-radius: 15px;
+}
+
+/* Seção Serviços */
+.servicos .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    background: #6dd5ed;
+    padding: 25px; /* Aumentado o padding */
+    border-radius: 12px;
+    font-weight: bold;
+    min-width: 220px;
+    text-align: center;
+    transition: transform .3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Seção Depoimentos */
+.depoimentos-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.depoimento {
+    background: #fff;
+    padding: 20px; /* Aumentado o padding */
+    border-radius: 10px;
+    max-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Galeria de Blocos */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.bloco {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.bloco:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Seção Notícias */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.noticia {
+    background: #2193b0;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Formulário Contato */
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Aumentado o espaçamento */
+    max-width: 400px;
+    margin: auto;
+}
+.contato input, 
+.contato textarea {
+    padding: 12px; /* Aumentado o padding */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.contato button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #43cea2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contato button:hover {
+    background: #185a9d;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 20px; /* Aumentado o padding */
+    margin-top: 40px; /* Aumentado a margem superior */
+}
+
+/* ========================
+   ESTILOS RESPONSIVOS
+   ======================== */
+
+/* 📌 O que é @media?@media(max-width: 600px) {
+
+    body {
+        background-color: rgb(223, 223, 229);
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+}
+   -> É uma regra CSS usada para aplicar estilos apenas quando certas condições forem verdadeiras.
+   Exemplo: largura da tela, altura da tela, orientação (retrato/paisagem) etc.
+
+   📌 O que é breakpoint?
+   -> É o "ponto de quebra" onde o layout muda para se adaptar ao tamanho da tela.
+   Exemplo: 600px, 768px, 1024px...
+
+   📌 O que é max-width?
+   -> Significa "largura máxima". 
+   Exemplo: @media (max-width: 600px) aplica estilos SOMENTE em telas de até 600px.
+
+   📌 O que é min-width?
+   -> Significa "largura mínima". 
+   Exemplo: @media (min-width: 769px) aplica estilos SOMENTE em telas de 769px ou mais.
+*/
+
+/* MOBILE (até 600px)
+   - Menu vira coluna
+   - Mensagem mobile aparece
+   - Blocos ficam menores 
+*/
+
+
+@media(max-width: 600px) {
+
+    body {
+        background-color: rgb(223, 223, 229);
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 601px) and (max-width: 768) {
+    header h1 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,62 @@
+/*
+  DISPLAY: GRID -> é uma propriedade CSS que cria um contêiner baseado 
+  em linhas e colunas. Diferente do flexbox (que é 1D unidimensional),
+  o Grid é 2D bidimensional: controla linhas e colunas ao mesmo tempo.
+
+  Antes (Flexbox): você precisava controlar direção (flex-direction), 
+  proporção (flex: 1 / flex: 4) e usar display: flex em vários níveis.
+
+  Agora (Grid): você declara linhas e colunas de uma vez com 
+  grid-template-columns e grid-template-rows, deixando o layout mais explícito.
+
+  fr = fractional unit (unidade fracionária).
+*/
+
+* {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.geral {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 680px;
+}
+
+
+/* CONFIG LATERAL DIREITO */
+.left {
+    display: grid;
+    background-color: blue;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.img-perfil {
+    background-color: aqua;
+}
+.contato {
+    background-color: bisque;
+}
+.formacao {
+    background-color: yellow;
+}
+
+/* CONFIG A ESQUERDA */
+
+
+
+
+
+
+
+.right {
+    background-color: blueviolet ;
+}
+
+
+
+
+
+
