@@ -143,6 +143,12 @@ Depois, no `app.js`, criar uma rota `/testdb` que executa essa função e mostra
 
 ### 9. Criar Repositório no GitHub
 
+- Criar o arquivo .gitignore e adicionar as restrições abaixo:
+
+```js
+**/node_modules
+```
+
 - Criar um repositório específico apenas para o projeto Blog no GitHub.
 - Nome do repositório: blog-nodejs
 - Deixe como público
