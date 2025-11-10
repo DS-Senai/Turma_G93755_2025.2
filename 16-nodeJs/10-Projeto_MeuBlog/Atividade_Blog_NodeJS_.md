@@ -147,6 +147,7 @@ Depois, no `app.js`, criar uma rota `/testdb` que executa essa função e mostra
 
 ```js
 **/node_modules
+.env
 ```
 
 - Criar um repositório específico apenas para o projeto Blog no GitHub.
